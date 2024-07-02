@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartões</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="images/favicon-32x32.png" type="image/x-icon">
+</head>
+<body>
+    <button id="whiteorblack" onclick="toggle()"></button>
+    <div id="container">
+        <picture>
+            <source media="(min-width: 1070px)" srcset="images/bg-main-desktop.png" id="bgdesktop">
+            <img src="images/bg-main-mobile.png" id="bgmobile">
+        </picture>
+        <div id="cards">
+            <div id="cardFront">
+                <img src="images/bg-card-front.png" id="cardUp">
+                <p id="cardNumber">0000 0000 0000 0000</p>
+                <p id="cardName">JANE APLESSED</p>
+                <p id="cardDate">00/00</p>
+                <div id="ball"></div>
+                <div id="circle"></div>
+            </div>
+            <div id="cardBack">
+                <img src="images/bg-card-back.png" id="cardDown">
+                <P id="cardCvc">000</P>
+            </div>
+        </div>
+    </div>
+    <main>
+        <div id="informations">
+            <p class="paragraph">CARDHOLDER NAME</p>
+            <input class="inputs" type="text" placeholder="e.g. Jane Appleseed" id="name" maxlength="25">
+
+            <p class="paragraph">CARD NUMBER</p>
+            <input class="inputs" type="text" placeholder="e.g. 1234 5678 9123 0000" id="number" maxlength="19">
+
+            <div id="date_cvc">
+                <div id="dates">
+                    <p class="paragraph">EXP.DATE(MM/YY)</p>
+
+                    <div>
+                        <input class="inputs" type="text" placeholder="MM" id="month" maxlength="2">
+                        <input class="inputs" type="text" placeholder="YY" id="year" maxlength="2">
+                    </div>
+                </div>
+
+                <div>
+                    <p id="cvc" class="paragraph">CVC</p>
+                    <input class="inputs" type="text" placeholder="e.g. 123" id="Cvc" maxlength="3">
+                </div>
+            </div>
+            <button id="button" onclick="confirm()">Confirm</button>
+        </div>
+        <div id="end">
+            <img src="images/icon-complete.svg">
+            <h1>THANK YOU!</h1>
+            <p>We've added your card details</p>
+            <button id="button" onclick="previous()">Continue</button>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
