@@ -126,6 +126,5 @@ function confirm(){
 }
 
 function previous(){
-    end.style.display='none'
-    informations.style.display='block'
+    location.reload();
 }
