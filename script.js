@@ -61,7 +61,7 @@ function toggle(){
 }
 
 
-name.addEventListener("keyup", function(event) {
+name.addEventListener("input", function(event) {
     let Name = this.value
     this.value = Name.replace(/\d/g, '') //Está removendo os caracteres que são numeros.
     cardName.innerText = name.value
